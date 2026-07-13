@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Bimodal CLT Demo", layout="wide")
 
-st.title("The Central Limit Theorem vs. Bimodal Chaos")
+st.title("The Central Limit Theorem on Two Distinct Groups")
 st.write(
     "This application proves that even if an underlying population "
     "is erratic and splits into two distinct peaks (bimodal), the averages of random "
@@ -35,7 +35,7 @@ sample_means = samples.mean(axis=1)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("1. Original Two-Peaked Population")
+    st.subheader("1. Original Bimodal Population")
     fig1, ax1 = plt.subplots()
     ax1.hist(underlying_data, bins=50, color="orange", edgecolor="black", alpha=0.7)
     ax1.set_title("Bimodal Mix Pool")
