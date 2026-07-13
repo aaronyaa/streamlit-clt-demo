@@ -52,4 +52,4 @@ with col2:
     ax2.set_xlabel("Sample Mean Value")
     ax2.set_ylabel("Count")
     st.pyplot(fig2)
-    st.caption("The central limit law forces the twin peaks to bridge together into a normal bell curve.")
+    st.caption("The Central Limit Theorem forces the distinct subgroups to merge into a symmetrical bell curve.")
