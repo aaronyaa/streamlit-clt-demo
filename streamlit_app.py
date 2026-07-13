@@ -11,3 +11,20 @@ st.write(
     "samples drawn from it will still converge into a clean, symmetrical normal curve."
 )
 
+# Sidebar interactive UI controls
+st.sidebar.header("Simulation Variables")
+sample_size = st.sidebar.slider("Sample Size ($n$)", min_value=2, max_value=150, value=30, step=5)
+num_simulations = st.sidebar.slider("Number of Simulations", min_value=100, max_value=5000, value=2000, step=100)
+
+np.random.seed(42)
+pool_size = 10000
+
+peak_one = np.random.normal(loc=2.0, scale=0.5, size=pool_size // 2)
+peak_two = np.random.normal(loc=6.0, scale=0.8, size=pool_size // 2)
+underlying_data = np.concatenate([peak_one, peak_two])
+
+samples_peak1 = np.random.normal(loc=2.0, scale=0.5, size=(num_simulations, sample_size))
+samples_peak2 = np.random.normal(loc=6.0, scale=0.8, size=(num_simulations, sample_size))
+
+selector = np.random.binomial(1, 0.5, size=(num_simulations, sample_size))
+samples = np.where(selector == 1, samples_peak1, samples_peak2)
