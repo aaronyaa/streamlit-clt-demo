@@ -42,7 +42,7 @@ with col1:
     ax1.set_xlabel("Value")
     ax1.set_ylabel("Count")
     st.pyplot(fig1)
-    st.caption("A messy population where data splits into two completely separate clusters.")
+    st.caption("The raw ungrouped dataset clearly split into two separate population segments.")
 
 with col2:
     st.subheader("2. Distribution of the Sample Means")
