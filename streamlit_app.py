@@ -7,8 +7,8 @@ st.set_page_config(page_title="Bimodal CLT Demo", layout="wide")
 st.title("The Central Limit Theorem on Two Distinct Groups")
 st.write(
     "This application proves that even if an underlying population "
-    "is erratic and splits into two distinct peaks (bimodal), the averages of random "
-    "samples drawn from it will still smooth out into a clean, symmetrical normal curve."
+    "is highly divided and splits into two distinct peaks (bimodal), the averages of random "
+    "samples drawn from it will still converge into a clean, symmetrical normal curve."
 )
 
 # Sidebar interactive UI controls
